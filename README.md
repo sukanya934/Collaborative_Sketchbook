@@ -13,7 +13,7 @@
 
 
 
-#Notes overall functionality.How it is going to work.
+#Notes--> overall functionality.How it is going to work.
 
 `After Login, a blank drawing panel will open.
 When one user draws something in the panel and saves it,another user can view the last saved drawing by clicking on the load button.

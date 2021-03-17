@@ -1,0 +1,45 @@
+[{
+  "_id": {
+    "$oid": "6040814105aacc2464ecfb73"
+  },
+  "updated_at": {
+    "$date": "2021-03-04T06:42:09.697Z"
+  },
+  "name": "Rimi",
+  "email": "rimi@gmail.com",
+  "password": "$2b$10$4D.h/UtBxbews9mrZKEkPOgVhOt9mR1HjPdrigMLOmrOfwJfnyy4K",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6040b37f092410093ce490ce"
+  },
+  "updated_at": {
+    "$date": "2021-03-04T10:16:31.387Z"
+  },
+  "name": "sukanya.chakraborty",
+  "email": "sukanya.chakraborty@codeclouds.in",
+  "password": "$2b$10$U7ttqC55Fq0.zsYsTP96heiM5u2/cjSq9.nTyr9KF9w559/JwBjQe",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6040bd70e32c1e25f89bde45"
+  },
+  "updated_at": {
+    "$date": "2021-03-04T10:58:56.132Z"
+  },
+  "name": "Rahul Bose",
+  "email": "rahul@gmail.com",
+  "password": "$2b$10$2NvLV6cByctHwghV95Tm7.e6TU1l9CvB5LICAP62NYtL9t4htUynq",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6040e231d794420428dff495"
+  },
+  "updated_at": {
+    "$date": "2021-03-04T13:35:45.922Z"
+  },
+  "name": "Jack Doe",
+  "email": "jack@gmail.com",
+  "password": "$2b$10$VsBF3RSYfWYuE3CvbQw0Pu1NqIvkTuJCRPk5etJBeerNyrinqGIO.",
+  "__v": 0
+}]

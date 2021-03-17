@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
+
+    <title>Sketch Book</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/sticky-footer-navbar/">
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://getbootstrap.com/docs/4.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="https://getbootstrap.com/docs/4.0/examples/sticky-footer-navbar/sticky-footer-navbar.css"
+        rel="stylesheet">
+     <link rel="stylesheet" href="../stylesheets/style1.css">
+
+</head>
+
+<body style="background: rgba(128, 128, 128, 0.986);">
+
+    <header>
+        <!-- Fixed navbar -->
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+            <a class="navbar-brand" href="/home">Sketch Book</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/home">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <!-- <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#">Disabled</a>
+            </li> -->
+                </ul>
+                <form class="form-inline mt-2 mt-md-0">
+                    <!-- <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search"> -->
+                    <strong class="btn btn-outline-success my-2 my-sm-0">
+                        <%= user.name %>
+                    </strong>
+                    <a class="btn btn-outline-success my-2 my-sm-0" type="button" value="logout"
+                        href="/logout">Logout</a>
+                </form>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Begin page content -->
+    <main role="main" class="container">
+        <div class="flex-container">
+            <div>
+            <canvas id= "canvas" width="850" height="550"></canvas>
+            </div>
+            <div class="flex-container">
+                <div><button type="button" class="button" onClick="clearDrawing()">Clear</button></div>
+                <!-- <div><button type="button" class="button" onClick="clearDrawing()">Clear</button></div> -->
+                <div><button type="button" class="button" onClick="save()">Save</button></div>
+                <div><button type="button" class="button" id="load" onClick="load()">Load</button></div>
+
+                
+                <div><button class="round-button red selected" style="background: red;" onClick="selectColor('red')"></button></div>
+                <div><button class="round-button blue selected" style="background: blue;" onClick="selectColor('blue')"></button></div>
+                <div><button class="round-button green selected" style="background: green;" onClick="selectColor('green')"></button></div>
+
+                <div><input type="color" class="color-picker"onInput="selected_color=this.value"></div>
+                <div><input type="range" min="1" max="100" class="pen-range" onInput="selected_width=this.value"></div>
+            </div>
+        </div>
+        
+        <!-- <h1>Welcome to dashboard <%= user.name %></h1> -->
+        <!-- <h1 class="mt-5">Sticky footer with fixed navbar</h1>
+        <p class="lead">Pin a fixed-height footer to the bottom of the viewport in desktop browsers with this custom
+            HTML and CSS. A fixed navbar has been added with <code>padding-top: 60px;</code> on the
+            <code>body &gt; .container</code>.</p>
+        <p>Back to <a
+                href="https://getbootstrap.com/docs/4.0/examples/sticky-footer-navbar/sticky-footer-navbar.css">the
+                default sticky footer</a> minus the navbar.</p> -->
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <span class="text-muted">Copyright@footer.</span>
+        </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="https://getbootstrap.com/docs/4.0/assets/js/vendor/popper.min.js"></script>
+    <script src="https://getbootstrap.com/docs/4.0/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+    <script src="https://cdn.rawgit.com/magicien/undo-canvas/v0.1.3/undo-canvas.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="/test_draw.js"></script>
+</body>
+
+</html>

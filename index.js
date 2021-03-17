@@ -21,7 +21,8 @@ app.use(express.static(__dirname + '/public'));
 app.use(express.urlencoded({ extended: false }));
 app.set('view-engine', 'ejs');
 app.use(morgan('dev'));
-mongoose.connect('mongodb://localhost/test', { useNewUrlParser: true, useUnifiedTopology: true })
+const mongodbUrl=process.env.MONGODB_URL || 'mongodb://localhost/test'
+mongoose.connect(mongodbUrl, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log('database connection succesful'))
   .catch((err) => console.error(err));
 router.use(bodyparser.urlencoded({ extended: true }));

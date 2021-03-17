@@ -26,7 +26,7 @@ socket.on('update_sketch', (data) => {
 
 
 function drawLine(context, x1, y1, x2, y2, color = selected_color, width = selected_width) {
-    // if(!from_server){
+  
     // socket.emit('update_sketch',JSON.stringify({x1,y1,x2,y2,color}));
     //console.log(JSON.stringify({x1,y1,x2,y2,color}));
     // socket.emit('update_sketch', JSON.stringify({ x1, y1, x2, y2, color, width }))// {
@@ -49,11 +49,6 @@ function drawLine(context, x1, y1, x2, y2, color = selected_color, width = selec
     //console.log(context.closePath());
     history.push(context.getImageData(0, 0, canvas.width, canvas.height));
 
-    //index +=1;
-    //console.log(history);
-
-    // console.log(context);
-    //}
 }
 
 function dragStart(e) {

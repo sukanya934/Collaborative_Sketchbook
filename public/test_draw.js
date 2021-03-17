@@ -26,7 +26,8 @@ socket.on('update_sketch', (data) => {
 
 
 function drawLine(context, x1, y1, x2, y2, color = selected_color, width = selected_width) {
-  
+    //Debugging Purpose
+
     // socket.emit('update_sketch',JSON.stringify({x1,y1,x2,y2,color}));
     //console.log(JSON.stringify({x1,y1,x2,y2,color}));
     // socket.emit('update_sketch', JSON.stringify({ x1, y1, x2, y2, color, width }))// {
@@ -77,6 +78,8 @@ function dragStop(e) {
 function init() {
     canvas = document.getElementById("canvas");
     context = canvas.getContext("2d");
+    //Debugging Purpose
+
     // var toDrawUrl = localStorage.getItem('url');
     //window.href.location(toDrawUrl);
     //console.log(toDrawUrl);
@@ -109,6 +112,8 @@ function clearDrawing() {
         socket.emit('forceDisconnect');
         context.clearRect(0, 0, canvas.width, canvas.height);
         history = [];
+        //Debugging Purpose
+
         // // index= -1;
         // socket.on('disconnect', function () {
         //     console.log('disconnected event');
@@ -124,6 +129,9 @@ function clearDrawing() {
 function undoDrawing() {
 
     history.pop();
+
+    //Debugging Purpose
+
     //     console.log(history);
     //     var retore_img=history[history.length-1]
     //    console.log(history[history.length-1]);
@@ -141,7 +149,6 @@ function undoDrawing() {
 }
 
 function save() {
-    //var canvas = document.createElement ("canvas");// preparing a new white canvas element
     var dataUrl = canvas.toDataURL();
     //console.log(canvas);
     //console.log(canvas.toDataURL());
@@ -173,14 +180,9 @@ function load() {
         init();
         var img = new Image();
         img.onload = function (e) {
-            //drawLine(context, x, y, e.offsetX, e.offsetY);
-
             context.drawImage(img, 0, 0);
-            // console.log(context.drawImage(img, 0, 0));
         };
         img.src = data;
-        // window.open(img.src );
-        //console.log(img.src);
     })
 }
 

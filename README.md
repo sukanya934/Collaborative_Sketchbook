@@ -11,7 +11,8 @@
 1. Run `npm run start` to start the server.
 2. Open your browser and go to `http://localhost:3000`
 
-
+###test login with below email and password or create new one. 
+`agoris@gmail.com,123456` / `rahul@gmail.com,12345`
 
 #Notes--> overall functionality.How it is going to work.
 
